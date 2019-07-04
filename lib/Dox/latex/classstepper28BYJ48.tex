@@ -1,0 +1,81 @@
+\hypertarget{classstepper28BYJ48}{}\section{stepper28\+B\+Y\+J48 Class Reference}
+\label{classstepper28BYJ48}\index{stepper28\+B\+Y\+J48@{stepper28\+B\+Y\+J48}}
+
+
+A subclass based on steppermotor.  
+
+
+
+
+{\ttfamily \#include $<$stepper28\+B\+Y\+J48.\+hpp$>$}
+
+
+
+Inheritance diagram for stepper28\+B\+Y\+J48\+:
+% FIG 0
+
+
+Collaboration diagram for stepper28\+B\+Y\+J48\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classstepper28BYJ48_a0cd7320252c267c728f17ca3de814019}{stepper28\+B\+Y\+J48} (hwlib\+::port\+\_\+out \&\hyperlink{classsteppermotor_a46084d0eae151993b4da56d9de1136d9}{port}, uint16\+\_\+t \hyperlink{classstepper28BYJ48_a1e6ced57ccc8b4df2f706ed25179586a}{steps\+Per\+Rotation}=4096)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classstepper28BYJ48_af3033cdae6ad2f3670053759d13f809f}{turn\+Clockwise\+Degrees} (uint16\+\_\+t degrees)
+\begin{DoxyCompactList}\small\item\em Turns the motor a given amount of degrees in clockwise direction. \end{DoxyCompactList}\item 
+void \hyperlink{classstepper28BYJ48_a074bc8527a623e0894f2ef8674d83bf0}{turn\+Counter\+Clockwise\+Degrees} (uint16\+\_\+t degrees)
+\begin{DoxyCompactList}\small\item\em Turns the motor a given amount of degrees in counterclockwise direction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classstepper28BYJ48_a1e6ced57ccc8b4df2f706ed25179586a}\label{classstepper28BYJ48_a1e6ced57ccc8b4df2f706ed25179586a}} 
+uint16\+\_\+t \hyperlink{classstepper28BYJ48_a1e6ced57ccc8b4df2f706ed25179586a}{steps\+Per\+Rotation}
+\begin{DoxyCompactList}\small\item\em The amount of steps the motor has to take to complete one revolution of the output shaft. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A subclass based on steppermotor. 
+
+This is a subclass of steppermotor which adds the functionality of being able to turn a given amount of degrees on top of the general steppermotor functions. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classstepper28BYJ48_a0cd7320252c267c728f17ca3de814019}\label{classstepper28BYJ48_a0cd7320252c267c728f17ca3de814019}} 
+\index{stepper28\+B\+Y\+J48@{stepper28\+B\+Y\+J48}!stepper28\+B\+Y\+J48@{stepper28\+B\+Y\+J48}}
+\index{stepper28\+B\+Y\+J48@{stepper28\+B\+Y\+J48}!stepper28\+B\+Y\+J48@{stepper28\+B\+Y\+J48}}
+\subsubsection{\texorpdfstring{stepper28\+B\+Y\+J48()}{stepper28BYJ48()}}
+{\footnotesize\ttfamily stepper28\+B\+Y\+J48\+::stepper28\+B\+Y\+J48 (\begin{DoxyParamCaption}\item[{hwlib\+::port\+\_\+out \&}]{port,  }\item[{uint16\+\_\+t}]{steps\+Per\+Rotation = {\ttfamily 4096} }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Constructs a \hyperlink{classstepper28BYJ48}{stepper28\+B\+Y\+J48} object out of the given hwlib\+::port\+\_\+out and an amount of steps per rotation, which defaults to 4096. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classstepper28BYJ48_af3033cdae6ad2f3670053759d13f809f}\label{classstepper28BYJ48_af3033cdae6ad2f3670053759d13f809f}} 
+\index{stepper28\+B\+Y\+J48@{stepper28\+B\+Y\+J48}!turn\+Clockwise\+Degrees@{turn\+Clockwise\+Degrees}}
+\index{turn\+Clockwise\+Degrees@{turn\+Clockwise\+Degrees}!stepper28\+B\+Y\+J48@{stepper28\+B\+Y\+J48}}
+\subsubsection{\texorpdfstring{turn\+Clockwise\+Degrees()}{turnClockwiseDegrees()}}
+{\footnotesize\ttfamily void stepper28\+B\+Y\+J48\+::turn\+Clockwise\+Degrees (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{degrees }\end{DoxyParamCaption})}
+
+
+
+Turns the motor a given amount of degrees in clockwise direction. 
+
+Calculates the amount of steps needed to turn and rotates the motor that amount of steps. \mbox{\Hypertarget{classstepper28BYJ48_a074bc8527a623e0894f2ef8674d83bf0}\label{classstepper28BYJ48_a074bc8527a623e0894f2ef8674d83bf0}} 
+\index{stepper28\+B\+Y\+J48@{stepper28\+B\+Y\+J48}!turn\+Counter\+Clockwise\+Degrees@{turn\+Counter\+Clockwise\+Degrees}}
+\index{turn\+Counter\+Clockwise\+Degrees@{turn\+Counter\+Clockwise\+Degrees}!stepper28\+B\+Y\+J48@{stepper28\+B\+Y\+J48}}
+\subsubsection{\texorpdfstring{turn\+Counter\+Clockwise\+Degrees()}{turnCounterClockwiseDegrees()}}
+{\footnotesize\ttfamily void stepper28\+B\+Y\+J48\+::turn\+Counter\+Clockwise\+Degrees (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{degrees }\end{DoxyParamCaption})}
+
+
+
+Turns the motor a given amount of degrees in counterclockwise direction. 
+
+Calculates the amount of steps needed to turn and rotates the motor that amount of steps. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{stepper28BYJ48_8hpp}{stepper28\+B\+Y\+J48.\+hpp}\item 
+stepper28\+B\+Y\+J48.\+cpp\end{DoxyCompactItemize}
