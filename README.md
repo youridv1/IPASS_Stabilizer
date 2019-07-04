@@ -6,6 +6,9 @@ designed this base for others to build upon. As well as, of course, writing the 
 
 In this repository you will find libraries for all hardware used, excluding the Arduino Due.
 
+The included 3D models are courtesy of a friend of mine, who shall remain unknown for now. He took my rough 3D models of what you 
+see here and worked together with me to turn them into the way more polished endresult you'll find in this repository.
+
 To make it all work, there's actually one more thing you will require. The hwlib, which was not made by me, is what this project is
 based on. The contents of this library are subject to change, but not to an extent that you can't figure out yourself.
 It can be found here: https://github.com/wovo/installers
