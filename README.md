@@ -7,7 +7,7 @@ designed this base for others to build upon. As well as, of course, writing the 
 In this repository you will find libraries for all hardware used, excluding the Arduino Due.
 
 To make it all work, there's actually one more thing you will require. The hwlib, which was not made by me, is what this project is
-based on. The contents of this library are subject to change, but not to an extend that you can't figure out yourself.
+based on. The contents of this library are subject to change, but not to an extent that you can't figure out yourself.
 It can be found here: https://github.com/wovo/installers
 
 Used Hardware:
