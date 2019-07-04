@@ -7,12 +7,15 @@
 #include "MPU6050.hpp"
 
 int main(){
+
+  // Setting up the pins and creating an MPU6050 object
   auto scl = hwlib::target::pin_oc(hwlib::target::pins::scl);
-	auto sda = hwlib::target::pin_oc(hwlib::target::pins::sda);
+  auto sda = hwlib::target::pin_oc(hwlib::target::pins::sda);
   auto bus = hwlib::i2c_bus_bit_banged_scl_sda(scl, sda);
   auto mpu = Mpu6050(bus, 0x68);
   hwlib::wait_ms( 500 );
 
+  // Set all the defaults and disable sleepmode so it's able to measure
   mpu.disableSleep();
   mpu.setGyroConfig(0);
   mpu.setAcceleroConfig(0);
@@ -20,6 +23,7 @@ int main(){
 
   uint8_t passedTests = 0;
 
+  // Do all the measurements
   int16_t AccX = mpu.readAccX();
   int16_t AccY = mpu.readAccY();
   int16_t AccZ = mpu.readAccZ();
@@ -32,6 +36,7 @@ int main(){
 
   hwlib::wait_ms(500);
 
+  // Is it connected? Is the content of the WHO_AM_I register what we expect?
   if(mpu.readRegister(0x75) == 0x68){
     hwlib::cout << "MPU6050 successfully connected" << hwlib::endl;
     passedTests++;
@@ -41,6 +46,7 @@ int main(){
 
   hwlib::wait_ms(500);
 
+  // Testing if the registers can be successfully configured (and read)
   mpu.setConfig(0);
   if( mpu.readConfig() == 0){
     hwlib::cout << "CONFIG write/read test passed for value 0" << hwlib::endl;
@@ -151,6 +157,7 @@ int main(){
 
   hwlib::wait_ms(500);
 
+  // Testing if sleep can be enabled and disabled
   mpu.enableSleep();
   if( mpu.readRegister(0x6B) == 1){
     hwlib::cout << "Sleep mode succesfully activated" << hwlib::endl;
@@ -169,6 +176,7 @@ int main(){
 
   hwlib::wait_ms(500);
 
+  // Testing if the measured values are realistic
   if( AccX >= -981 && AccX <= 981){
     hwlib::cout << "Accelerometer X axis passed" << hwlib::endl;
     passedTests++;
